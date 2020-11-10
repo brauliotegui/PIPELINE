@@ -7,6 +7,7 @@ from flair.models import TextClassifier
 from flair.data import Sentence
 from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
+import logging
 
 
 # connect to local MongoDB
@@ -17,14 +18,16 @@ tweets = db.tweets
 
 # set parameters for local postgresDB
 DATABASE_USER = "postgres"
-DATABASE_PASSWORD = "postgres"
+DATABASE_PASSWORD = "1234"
 DATABASE_HOST = "postgresdb"
 DATABASE_PORT = "5432"
 DATABASE_DB_NAME = "postgres"
 
+
 # connect to postgres
 conns = f"postgres://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_HOST}:{DATABASE_PORT}/{DATABASE_DB_NAME}"
-postgres_db = create_engine = create_engine(conns, encoding="utf-8")
+#postgres_db = create_engine = create_engine(conns, encoding="utf-8")
+postgres_db = create_engine('postgres://postgres:1234@postgresdb:5432/postgres', echo=True)
 
 # create table for twitter data from mongodb
 create_query = """
@@ -125,12 +128,13 @@ def load(**context):
                 "flair_score": tweet["flair_score"],
             },
         )
-
+        logging.critical('--Inserting a new a tweet into postgres--')
+        logging.critical(tweet)
 
 # define default arguments
 default_args = {
     "owner": "Braulio",
-    "start_date": datetime(2020, 11, 10),
+    "start_date": datetime(2020, 10, 10),
     # 'end_date':
     "email": ["brarrunategui@gmail.com"],
     "email_on_failure": False,

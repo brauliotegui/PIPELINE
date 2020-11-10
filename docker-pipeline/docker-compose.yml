@@ -10,13 +10,13 @@ services:
   mongodb:
     image: mongo
     ports:
-    - 27027:27017
+    - 27018:27017
 
   postgresdb:
     image: postgres
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_PASSWORD=1234
     ports:
       - 5555:5432
 

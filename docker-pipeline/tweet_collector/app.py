@@ -4,6 +4,7 @@ from tweepy import OAuthHandler, Stream
 from tweepy.streaming import StreamListener
 import json
 import pymongo
+import logging
 
 
 # connect to local MongoDB
@@ -69,6 +70,9 @@ class TwitterListener(StreamListener):
 
         # write to mongo collection 'tweets'
         db.tweets.insert(tweet)
+        logging.critical('SUCCESSFULLY ADDED TO DB!!!!!!')
+
+        logging.critical(f'\n\n\nTWEET INCOMING: {tweet["text"]}\n\n\n')
 
     def on_error(self, status):
 
