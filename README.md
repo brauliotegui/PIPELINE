@@ -16,7 +16,7 @@ This data engineering project is composed of a data pipeline that implements sev
 Build a Dockerized Data Pipeline that stores a stream of Twitter data in databases, analyzes the sentiment of tweets and visualizes the results on Metabase.
 
 * Build an infrastructure of docker containers
-* Collect Tweets through Twitter API (car manufacturers as keywords: Tesla, Volkswagen, Renault, Toyota, Hyundai, Fiat, Geely)
+* Collect Tweets through Twitter API (airlines as keywords: Ryanair, easyJet, KLM, Lufthansa, TAP, British Airways)
 * Store Tweets in a Mongo DB
 * Perform sentiment analysis with [vaderSentiment](https://github.com/cjhutto/vaderSentiment) and [Flair](https://github.com/flairNLP/flair)
 * Store transformed Tweets in Postgres database
