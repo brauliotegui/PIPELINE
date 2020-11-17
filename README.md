@@ -3,6 +3,7 @@ A data pipeline to scrape and analyze posts from social media for tracking feedb
 
 ## Twitter Metabase Data Pipeline
 <img src="https://github.com/brauliotegui/PIPELINE/blob/main/dataflow_diagram.jpg">
+<img src="https://github.com/brauliotegui/PIPELINE/blob/main/airflow-demo.gif">
 
 
 ### Background
