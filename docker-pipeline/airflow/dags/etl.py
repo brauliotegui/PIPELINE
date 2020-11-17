@@ -134,7 +134,7 @@ def load(**context):
 # define default arguments
 default_args = {
     "owner": "Braulio",
-    "start_date": datetime(2020, 10, 10),
+    "start_date": datetime(2020, 11, 15),
     # 'end_date':
     "email": ["brarrunategui@gmail.com"],
     "email_on_failure": False,

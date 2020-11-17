@@ -86,6 +86,6 @@ if __name__ == "__main__":
     listener = TwitterListener()
     stream = Stream(auth, listener)
     stream.filter(
-        track=["Ryanair", "easyJet", "Lufthansa", "TAP", "KLM", "Vueling", "British Airways"],
+        track=["Ryanair", "easyJet", "Lufthansa", "TAP Air Portugal", "KLM", "Vueling", "British Airways"],
         languages=["en"],
     )
