@@ -10,6 +10,7 @@ A data pipeline to scrape and analyze posts from social media for tracking feedb
 
 This project analyzes the sentiment of tweets on airline companies during a COVID-19 wave to monitor how the customers have been perceiving them throughout this challenging time for these businesses. The tweets are analyzed on an ETL Python script to indicate if they bring a positive or negative sentiment.
 This data engineering project is composed of a data pipeline that implements several docker containers organised via docker-compose and managed and scheduled through Apache Airflow.
+
 [Docker](https://www.docker.com/) can package an application and its dependencies in a virtual container that can run on any machine and thus makes deployment much easier.  
 [Airflow](https://airflow.apache.org/) is a Python workflow management platform originally developed at Airbnb that is open-source.
 
